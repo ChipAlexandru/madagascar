@@ -3,6 +3,22 @@
 import { useEffect, useRef, useState } from "react";
 import type { Entry } from "@/lib/content";
 
+// Module-level coordinator: only one video plays at a time across the page.
+// Prevents mobile Safari from OOM-crashing when multiple <video> elements
+// try to decode simultaneously during scroll.
+let activeVideo: HTMLVideoElement | null = null;
+
+function takeVideoSlot(v: HTMLVideoElement) {
+  if (activeVideo && activeVideo !== v) {
+    activeVideo.pause();
+  }
+  activeVideo = v;
+}
+
+function releaseVideoSlot(v: HTMLVideoElement) {
+  if (activeVideo === v) activeVideo = null;
+}
+
 export function Section({ entry }: { entry: Entry }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const rootRef = useRef<HTMLElement>(null);
@@ -16,8 +32,13 @@ export function Section({ entry }: { entry: Entry }) {
         if (e.isIntersecting) setVisible(true);
         const video = videoRef.current;
         if (video) {
-          if (e.isIntersecting) video.play().catch(() => {});
-          else video.pause();
+          if (e.isIntersecting) {
+            takeVideoSlot(video);
+            video.play().catch(() => {});
+          } else if (!video.paused) {
+            video.pause();
+            releaseVideoSlot(video);
+          }
         }
       },
       { threshold: 0.35 }
@@ -42,6 +63,7 @@ export function Section({ entry }: { entry: Entry }) {
             alt={entry.title ?? entry.caption}
             className="w-full h-auto max-h-[80vh] object-contain rounded-lg shadow-2xl mx-auto"
             loading="lazy"
+            decoding="async"
           />
         ) : (
           <video
@@ -51,7 +73,7 @@ export function Section({ entry }: { entry: Entry }) {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="none"
           />
         )}
         <div className="mt-8 max-w-2xl mx-auto text-center">

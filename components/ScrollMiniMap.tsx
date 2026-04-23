@@ -11,10 +11,22 @@ import {
 const MiniMap = dynamic(() => import("./MiniMap"), { ssr: false });
 
 export default function ScrollMiniMap() {
+  const [isDesktop, setIsDesktop] = useState(false);
   const [activeLocation, setActiveLocation] = useState<string | null>(null);
   const [regionVisible, setRegionVisible] = useState(false);
 
+  // Only render (and load Leaflet) on desktop viewports.
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mq = window.matchMedia("(min-width: 768px)");
+    setIsDesktop(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return;
     const storyRegion = document.querySelector("[data-story-region]");
     const locEls = Array.from(
       document.querySelectorAll<HTMLElement>("[data-location]")
@@ -44,7 +56,9 @@ export default function ScrollMiniMap() {
       regionObserver.disconnect();
       locObserver.disconnect();
     };
-  }, []);
+  }, [isDesktop]);
+
+  if (!isDesktop) return null;
 
   const coords = activeLocation ? locationCoords[activeLocation] : null;
   const zoom = activeLocation
@@ -54,7 +68,7 @@ export default function ScrollMiniMap() {
 
   return (
     <div
-      className={`fixed top-4 right-4 z-50 w-48 h-48 md:w-60 md:h-60 rounded-lg overflow-hidden shadow-2xl border border-stone-800/60 hidden md:block transition-all duration-500 ${
+      className={`fixed top-4 right-4 z-50 w-60 h-60 rounded-lg overflow-hidden shadow-2xl border border-stone-800/60 transition-all duration-500 ${
         show
           ? "opacity-100 scale-100"
           : "opacity-0 scale-95 pointer-events-none"
