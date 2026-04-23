@@ -28,10 +28,10 @@ export const entries: Entry[] = [
   {
     type: "video",
     src: "IMG_5535.mp4",
-    location: "Crater Bay, Nosy Be",
+    location: "Andriana Resort, Crater Bay",
     title: "First view",
     caption:
-      "19 April, late afternoon. A viewpoint over the anchorage on the drive north to Andilana — someone had tipped a box of sailboats into the bay.",
+      "19 April, late afternoon. From the hotel balcony on Crater Bay — someone had tipped a box of sailboats into the anchorage below.",
   },
   {
     type: "video",
@@ -108,7 +108,7 @@ export const entries: Entry[] = [
   {
     type: "photo",
     src: "IMG_5574.jpg",
-    location: "Andriana Resort, Nosy Be",
+    location: "Andriana Resort, Crater Bay",
     title: "The book, mostly ignored",
     caption:
       "A leadership textbook open on Sara's lap, the sun dropping into the sea, a mojito at hand. The reading was not going well, and that was the point.",
@@ -116,7 +116,7 @@ export const entries: Entry[] = [
   {
     type: "photo",
     src: "IMG_5578.jpg",
-    location: "Andriana Resort, Nosy Be",
+    location: "Andriana Resort, Crater Bay",
     title: "Day one, sunset",
     caption:
       "The sky goes through every orange in ten minutes. A fishing boat drifts across the reflection and holds the whole frame together.",
@@ -124,7 +124,7 @@ export const entries: Entry[] = [
   {
     type: "photo",
     src: "IMG_5579.jpg",
-    location: "Andriana Resort, Nosy Be",
+    location: "Andriana Resort, Crater Bay",
     title: "Dinner for two",
     caption:
       "Plates we didn't recognize and didn't ask about. I'd thrown a towel over my shoulders because the breeze had gone cool. Sara laughed at the towel.",
@@ -132,7 +132,7 @@ export const entries: Entry[] = [
   {
     type: "photo",
     src: "IMG_5582.jpg",
-    location: "Andriana Resort, Nosy Be",
+    location: "Andriana Resort, Crater Bay",
     title: "A trick of light",
     caption:
       "Crepuscular rays fanning up from the horizon, a crescent moon already out. We stood on the balcony for half an hour and didn't say anything.",
@@ -283,7 +283,7 @@ export const entries: Entry[] = [
   {
     type: "photo",
     src: "IMG_5819.jpg",
-    location: "Andriana Resort, Nosy Be",
+    location: "Andriana Resort, Crater Bay",
     title: "Last light",
     caption:
       "Same ocean, different night. You'd think five days of sunsets would blur together — they don't.",

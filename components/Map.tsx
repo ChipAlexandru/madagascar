@@ -11,7 +11,7 @@ type Spot = {
 };
 
 const spots: Spot[] = [
-  { name: "Andriana Resort", coords: [-13.155, 48.200], dayLabel: "Base" },
+  { name: "Andriana Resort", coords: [-13.405, 48.278], dayLabel: "Base" },
   { name: "Nosy Komba", coords: [-13.453, 48.340], dayLabel: "Day 2" },
   { name: "Nosy Tanikely", coords: [-13.481, 48.237], dayLabel: "Day 2" },
   { name: "Nosy Sakatia", coords: [-13.314, 48.185], dayLabel: "Day 3" },
