@@ -1,3 +1,4 @@
+import MapSection from "@/components/MapSection";
 import { Section } from "@/components/Section";
 import { entries, hero, outro } from "@/lib/content";
 
@@ -19,6 +20,8 @@ export default function Home() {
           <p className="mt-20 text-sm text-stone-500 animate-pulse">scroll ↓</p>
         </div>
       </section>
+
+      <MapSection />
 
       {entries.length === 0 ? (
         <section className="min-h-screen flex items-center justify-center px-6">
