@@ -157,9 +157,17 @@ export const entries: Entry[] = [
     type: "video",
     src: "clip-turtle.mp4",
     location: "Nosy Sakatia",
-    title: "Sea turtle, up close",
+    title: "Surface sighting",
     caption:
-      "A green turtle grazing on seagrass, six or seven feet across. We floated above it for a long time — it didn't care we were there.",
+      "The skipper cut the engine — a big shadow under the surface, a green turtle seven feet across. We got the masks on as fast as we could.",
+  },
+  {
+    type: "video",
+    src: "clip-turtles-underwater.mp4",
+    location: "Nosy Sakatia",
+    title: "Down with them",
+    caption:
+      "In the water, a few of them grazing on the seagrass. We hung above them as long as our breath held — they never looked up.",
   },
   {
     type: "photo",
@@ -195,6 +203,14 @@ export const entries: Entry[] = [
   },
   {
     type: "photo",
+    src: "IMG_5687.jpg",
+    location: "Mont Passot, Nosy Be",
+    title: "After the sun",
+    caption:
+      "Last light draining off the bay behind us. Neither of us wanted to head down yet.",
+  },
+  {
+    type: "photo",
     src: "IMG_5738.jpg",
     location: "Nosy Iranja",
     title: "The sandbar",
@@ -211,11 +227,27 @@ export const entries: Entry[] = [
   },
   {
     type: "photo",
+    src: "IMG_5743.jpg",
+    location: "Nosy Iranja",
+    title: "Walking the strip",
+    caption:
+      "On the isthmus at low tide. Walk out on one side, walk back the other — in a couple of hours the sea would take the whole thing back.",
+  },
+  {
+    type: "photo",
     src: "IMG_8650.jpg",
     location: "Nosy Iranja",
     title: "From the top",
     caption:
       "Short climb up the hill above the village, lighthouse at your back. The sandbar we'd just walked on, now a thin white line tying the two islands together.",
+  },
+  {
+    type: "video",
+    src: "IMG_5749.mp4",
+    location: "Hell-Ville, Nosy Be",
+    title: "Market night",
+    caption:
+      "Evening transfer through Hell-Ville on the way back from the port. Tuk-tuk windows open, Casino's pink sign bright against the dark.",
   },
   {
     type: "photo",
@@ -257,12 +289,36 @@ export const entries: Entry[] = [
       "Cold water running down warm rock in the middle of the rainforest. We stood under it just long enough to get the point.",
   },
   {
+    type: "video",
+    src: "IMG_5782.mp4",
+    location: "Lokobe Reserve",
+    title: "Something small",
+    caption:
+      "The guide went quiet, crouched over the leaf litter, and a minute later slid something onto Sara's palm. Two inches of leaf-tailed gecko, almost invisible until you knew.",
+  },
+  {
+    type: "video",
+    src: "IMG_5783.mp4",
+    location: "Lokobe Reserve",
+    title: "Camouflage, close",
+    caption:
+      "Flat, striped, looks exactly like a piece of dead bark. You only see it once it twitches.",
+  },
+  {
     type: "photo",
     src: "IMG_5787.jpg",
     location: "Lokobe Reserve",
     title: "Last forest",
     caption:
       "Sara picked up a rhythm on these walks — slow, quiet, eyes up.",
+  },
+  {
+    type: "video",
+    src: "IMG_5790.mp4",
+    location: "Lokobe Reserve",
+    title: "Shoulder ride",
+    caption:
+      "A chestnut female black lemur climbed up Sara's arm and settled on her shoulder. Sara stood very still; it stayed longer than either of them expected.",
   },
   {
     type: "video",

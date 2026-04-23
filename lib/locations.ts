@@ -12,6 +12,7 @@ export const locationCoords: Record<string, [number, number]> = {
   "En route to Lokobe": [-13.42, 48.32],
   "Lokobe Reserve": [-13.403, 48.336],
   "Lokobe village": [-13.403, 48.336],
+  "Hell-Ville, Nosy Be": [-13.405, 48.270],
 };
 
 export const locationZoom: Record<string, number> = {
