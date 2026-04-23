@@ -40,7 +40,13 @@ export default function Map() {
       center={[-13.4, 48.05]}
       zoom={9}
       scrollWheelZoom={false}
-      className="h-[520px] w-full rounded-xl shadow-2xl"
+      dragging={false}
+      touchZoom={false}
+      doubleClickZoom={false}
+      boxZoom={false}
+      keyboard={false}
+      zoomControl={false}
+      className="h-[380px] md:h-[520px] w-full rounded-xl shadow-2xl"
       style={{ background: "#111" }}
     >
       <TileLayer
