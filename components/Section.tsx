@@ -29,6 +29,7 @@ export function Section({ entry }: { entry: Entry }) {
   return (
     <section
       ref={rootRef}
+      data-location={entry.location ?? ""}
       className={`min-h-screen flex flex-col items-center justify-center px-6 py-20 transition-all duration-1000 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}

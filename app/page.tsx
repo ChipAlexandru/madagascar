@@ -1,4 +1,5 @@
 import MapSection from "@/components/MapSection";
+import ScrollMiniMap from "@/components/ScrollMiniMap";
 import { Section } from "@/components/Section";
 import { entries, hero, outro } from "@/lib/content";
 
@@ -35,8 +36,14 @@ export default function Home() {
           </div>
         </section>
       ) : (
-        entries.map((entry, i) => <Section key={i} entry={entry} />)
+        <div data-story-region>
+          {entries.map((entry, i) => (
+            <Section key={i} entry={entry} />
+          ))}
+        </div>
       )}
+
+      <ScrollMiniMap />
 
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
         <h2 className="text-4xl md:text-6xl font-bold">{outro.title}</h2>
