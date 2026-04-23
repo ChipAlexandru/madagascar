@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+build/
+.DS_Store
+.env*.local
+.vercel
+next-env.d.ts
+*.tsbuildinfo
+
+# Original HEIC/MOV files — kept locally as backups, not deployed
+public/media original/
